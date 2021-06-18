@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sku",
+  "info": {
+    "name": "sku",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "product": {
+      "model": "product",
+      "via": "skus"
+    },
+    "variance": {
+      "unique": true,
+      "via": "skus",
+      "model": "variance"
+    }
+  }
+}

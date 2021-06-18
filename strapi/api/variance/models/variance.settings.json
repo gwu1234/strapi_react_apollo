@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "variance",
+  "info": {
+    "name": "variance",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": "variance",
+      "unique": true,
+      "required": true
+    },
+    "variance": {
+      "type": "string"
+    },
+    "skus": {
+      "via": "variance",
+      "collection": "sku"
+    }
+  }
+}

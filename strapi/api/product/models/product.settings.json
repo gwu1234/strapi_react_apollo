@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product",
+  "info": {
+    "name": "product",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "category": {
+      "model": "category",
+      "via": "products"
+    },
+    "images": {
+      "via": "product",
+      "collection": "image"
+    },
+    "skus": {
+      "via": "product",
+      "collection": "sku"
+    }
+  }
+}
