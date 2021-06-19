@@ -21,6 +21,10 @@ graphql
 
 yarn strapi admin:reset-user-password --email="your email here" --password="your password here"
 
+### how to install graphql
+
+npm run strapi install graphql
+
 ### how to start strapi
 
 cd strapi and yarn start 
